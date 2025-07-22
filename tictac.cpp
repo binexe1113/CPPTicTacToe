@@ -48,3 +48,14 @@ bool insertXO(array<array<char, 3>, 3>& board, int cell, char player) {
     board[row][col] = player;
     return true;
 }
+
+bool checkNoMoves(array<array<char, 3>, 3>& board) {
+    for (const auto& row : board) {
+        for (const auto& cell : row) {
+            if (cell != 'X' && cell != 'O') {
+                return false; // There are still moves left
+            }
+        }
+    }
+    return true; // No moves left
+}
