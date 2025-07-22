@@ -5,6 +5,8 @@
 using namespace std;
 
 int main(){
+    // Declare players
+    char playerX, playerO;
     // Initialize the game board
     array<array<char, 3>, 3> board = formatTable();
 
